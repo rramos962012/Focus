@@ -11,5 +11,5 @@
 //  that your Row Level Security policies permit (your own rows, once logged in).
 // ============================================================
 
-window.SUPABASE_URL = "PASTE_YOUR_PROJECT_URL_HERE";
-window.SUPABASE_KEY = "PASTE_YOUR_ANON_OR_PUBLISHABLE_KEY_HERE";
+window.SUPABASE_URL = "https://wscqsqabqsjtppusgwbi.supabase.co";
+window.SUPABASE_KEY = "sb_publishable_2e2eB5rd-PxnYmeFYJHNCg_pjmcAFpe";
