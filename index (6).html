@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#4b57c4" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-title" content="FocusDo" />
+<title>FocusDo</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ============ AUTH SCREEN ============ -->
+<div id="auth" class="auth hidden">
+  <div class="auth-card">
+    <div class="auth-brand"><span class="brand-mark">◆</span> FocusDo</div>
+    <p class="auth-tag">Your day, your lists, your focus — synced everywhere.</p>
+    <div id="auth-error" class="auth-error hidden"></div>
+    <label class="field">
+      <span>Email</span>
+      <input id="auth-email" type="email" autocomplete="email" placeholder="you@example.com" />
+    </label>
+    <label class="field">
+      <span>Password</span>
+      <input id="auth-password" type="password" autocomplete="current-password" placeholder="••••••••" />
+    </label>
+    <button id="auth-submit" class="btn-primary">Sign in</button>
+    <div class="auth-switch">
+      <span id="auth-switch-text">New here?</span>
+      <button id="auth-toggle" class="linklike">Create an account</button>
+    </div>
+  </div>
+  <div class="auth-foot">Set up in seconds — see the README to connect Supabase.</div>
+</div>
+
+<!-- ============ SETUP NEEDED ============ -->
+<div id="setup" class="auth hidden">
+  <div class="auth-card">
+    <div class="auth-brand"><span class="brand-mark">◆</span> FocusDo</div>
+    <p class="auth-tag">Almost there — connect your database.</p>
+    <p class="setup-body">Open <code>config.js</code> and paste your Supabase <b>Project URL</b> and <b>public key</b>, then reload. The full walkthrough is in <code>README.md</code>.</p>
+  </div>
+</div>
+
+<!-- ============ APP ============ -->
+<div id="app" class="app hidden">
+  <button id="menu-btn" class="menu-btn" aria-label="Menu">☰</button>
+  <div id="scrim" class="scrim hidden"></div>
+
+  <!-- Sidebar -->
+  <aside id="sidebar" class="sidebar">
+    <div class="side-top">
+      <div class="brand"><span class="brand-mark">◆</span> FocusDo</div>
+      <button id="theme-btn" class="icon-btn" title="Toggle theme">◑</button>
+    </div>
+
+    <div class="search-wrap">
+      <input id="search" type="search" placeholder="Search tasks" />
+    </div>
+
+    <nav id="smart-nav" class="nav"></nav>
+    <div class="nav-label">Lists</div>
+    <nav id="list-nav" class="nav lists"></nav>
+
+    <button id="add-list" class="add-list">＋ New list</button>
+
+    <div class="side-foot">
+      <span id="user-email" class="user-email"></span>
+      <button id="signout" class="linklike">Sign out</button>
+    </div>
+  </aside>
+
+  <!-- Main -->
+  <main id="main" class="main"></main>
+
+  <!-- Detail pane -->
+  <section id="detail" class="detail"></section>
+</div>
+
+<div id="toast" class="toast hidden"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
